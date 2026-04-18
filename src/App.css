@@ -62,11 +62,17 @@
   font-weight: 300;
   text-align: center;
   flex: 0 0 auto;
-  transition: all 0.4s ease;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  opacity: 0; /* Hidden at top */
+  pointer-events: none;
+  transform: translateY(10px);
 }
 
 .header.scrolled .logo {
   font-size: 1.8rem;
+  opacity: 1; /* Visible on scroll */
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 .menu-toggle {

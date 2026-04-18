@@ -13,13 +13,10 @@ const Hero = ({ onReserve }: HeroProps) => {
           alt="Kinroll Handroll Bar" 
         />
       </div>
-      <div className="hero-content">
-        <div className="hero-brand">KINROLL</div>
-        <p className="hero-tagline">Elevated Hand Rolls</p>
-        <div className="hero-cta">
-           <button className="btn-hero" onClick={onReserve}>Book a Table</button>
-        </div>
-      </div>
+      {/* 
+          Note: Brand text and CTA removed here because 
+          they are already part of the hero-new.jpg image 
+      */}
       <div className="scroll-indicator">
         <span className="scroll-text">Scroll</span>
         <div className="scroll-line"></div>

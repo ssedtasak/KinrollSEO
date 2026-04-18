@@ -1,5 +1,11 @@
 import './Concept.css';
 
+const interiorImages = [
+  { src: '/interior1.jpg', alt: 'Kinroll Branch Interior 1' },
+  { src: '/interor2.jpg', alt: 'Kinroll Branch Interior 2' },
+  { src: '/interor3.jpg', alt: 'Kinroll Branch Interior 3' }
+];
+
 const Concept = () => {
   return (
     <section id="concept" className="concept section-padding">
@@ -16,13 +22,16 @@ const Concept = () => {
         </div>
       </div>
       
-      <div className="full-width-image-wrapper">
-         {/* High-end architectural detail shot matching Kinroll's minimalist wood design */}
-         <img 
-            src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=2000" 
-            alt="Kinroll Minimalist Interior Detail" 
-            className="full-width-img"
-         />
+      <div className="interior-gallery">
+         {interiorImages.map((img, index) => (
+           <div key={index} className="interior-image-wrapper">
+              <img 
+                src={img.src} 
+                alt={img.alt} 
+                className="interior-img"
+              />
+           </div>
+         ))}
       </div>
     </section>
   );
