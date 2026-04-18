@@ -1,0 +1,43 @@
+.menu-preview {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--bg);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-lg);
+  letter-spacing: 0.3em;
+}
+
+.menu-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.menu-page {
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.menu-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.menu-footer {
+  margin-top: var(--spacing-xl);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .menu-gallery {
+    gap: 1rem;
+  }
+}
