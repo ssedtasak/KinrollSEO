@@ -9,14 +9,17 @@ const Hero = ({ onReserve }: HeroProps) => {
     <section className="hero">
       <div className="hero-image-bg">
         <img 
-          src="/hero-new.jpg" 
+          src={`${import.meta.env.BASE_URL}hero-new.jpg`} 
           alt="Kinroll Handroll Bar" 
         />
       </div>
+      
       {/* 
-          Note: Brand text and CTA removed here because 
-          they are already part of the hero-new.jpg image 
+          Transparent overlay to make the "designed-in" button 
+          clickable without showing redundant text.
       */}
+      <div className="hero-interactive-layer" onClick={onReserve}></div>
+
       <div className="scroll-indicator">
         <span className="scroll-text">Scroll</span>
         <div className="scroll-line"></div>

@@ -30,6 +30,17 @@
   display: none;
 }
 
+.hero-interactive-layer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px; /* Estimated width of your designed button */
+  height: 60px; /* Estimated height of your designed button */
+  cursor: pointer;
+  z-index: 15;
+}
+
 .scroll-indicator {
   position: absolute;
   bottom: 2rem;
