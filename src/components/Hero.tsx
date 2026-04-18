@@ -1,5 +1,4 @@
 import './Hero.css';
-import heroImage from '../assets/hero.png';
 
 interface HeroProps {
   onReserve: () => void;
@@ -10,7 +9,7 @@ const Hero = ({ onReserve }: HeroProps) => {
     <section className="hero">
       <div className="hero-image-bg">
         <img 
-          src={heroImage} 
+          src="/hero-new.jpg" 
           alt="Kinroll Handroll Bar" 
         />
       </div>

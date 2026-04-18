@@ -24,22 +24,22 @@ function App() {
       <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
         <nav className="container">
           <ul className="nav-links left">
-            <li><a href="#concept">Concept</a></li>
             <li><a href="#menu">Menu</a></li>
+            <li><a href="#location">Locations</a></li>
           </ul>
 
           <div className="logo">KINROLL</div>
           
           <ul className="nav-links right">
-            <li><a href="#location">Locations</a></li>
             <li>
               <button 
                 className="reserve-nav-btn" 
                 onClick={() => setIsModalOpen(true)}
               >
-                Reserve
+                Reservations
               </button>
             </li>
+            <li><a href="#concept">Concept</a></li>
           </ul>
 
           <button className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -51,10 +51,10 @@ function App() {
         {/* Mobile Menu Overlay */}
         <div className={`mobile-menu ${isMenuOpen ? 'active' : ''}`}>
            <ul className="mobile-nav-links">
-              <li><a href="#concept" onClick={() => setIsMenuOpen(false)}>Concept</a></li>
               <li><a href="#menu" onClick={() => setIsMenuOpen(false)}>Menu</a></li>
               <li><a href="#location" onClick={() => setIsMenuOpen(false)}>Locations</a></li>
               <li><button onClick={() => { setIsModalOpen(true); setIsMenuOpen(false); }}>Reservations</button></li>
+              <li><a href="#concept" onClick={() => setIsMenuOpen(false)}>Concept</a></li>
            </ul>
         </div>
       </header>

@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  height: 100vh;
+  height: 85vh; /* Suggested size: Large enough for impact, hints at scroll */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,14 +21,15 @@
 .hero-image-bg img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  opacity: 0.6;
+  object-fit: cover; /* Ensures perfect crop regardless of screen size */
+  object-position: center 30%; /* Focus on the top-middle part of the image */
+  opacity: 0.8;
   animation: slowZoom 20s infinite alternate;
 }
 
 @keyframes slowZoom {
   from { transform: scale(1); }
-  to { transform: scale(1.1); }
+  to { transform: scale(1.05); }
 }
 
 .hero::after {
@@ -38,7 +39,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.25); /* Subtle dark overlay for text clarity */
   z-index: 2;
 }
 
@@ -49,18 +50,18 @@
 }
 
 .hero-brand {
-  font-size: 6rem;
+  font-size: 5rem;
   letter-spacing: 0.5em;
   font-weight: 300;
   margin-bottom: 1rem;
 }
 
 .hero-tagline {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.4em;
   font-weight: 400;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .hero-cta {
@@ -70,11 +71,11 @@
 .btn-hero {
   background-color: transparent;
   color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  padding: 1.2rem 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 1rem 2.5rem;
   text-transform: uppercase;
   letter-spacing: 0.3em;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   transition: all 0.4s ease;
 }
 
@@ -86,18 +87,18 @@
 
 .scroll-indicator {
   position: absolute;
-  bottom: 3rem;
+  bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
   z-index: 10;
 }
 
 .scroll-text {
-  font-size: 0.6rem;
+  font-size: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.4em;
   color: #FFFFFF;
@@ -106,8 +107,8 @@
 
 .scroll-line {
   width: 1px;
-  height: 80px;
-  background-color: rgba(255, 255, 255, 0.2);
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.3);
   position: relative;
   overflow: hidden;
 }
@@ -134,16 +135,19 @@
 
 @media (max-width: 1024px) {
   .hero-brand {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 }
 
 @media (max-width: 768px) {
+  .hero {
+    height: 80vh; /* Slightly shorter for mobile */
+  }
   .hero-brand {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     letter-spacing: 0.3em;
   }
   .hero-tagline {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
   }
 }
