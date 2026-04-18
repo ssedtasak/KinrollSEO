@@ -2,8 +2,8 @@ import './Concept.css';
 
 const interiorImages = [
   { src: `${import.meta.env.BASE_URL}interior1.jpg`, alt: 'Kinroll Branch Interior 1' },
-  { src: `${import.meta.env.BASE_URL}interor2.jpg`, alt: 'Kinroll Branch Interior 2' },
-  { src: `${import.meta.env.BASE_URL}interor3.jpg`, alt: 'Kinroll Branch Interior 3' }
+  { src: `${import.meta.env.BASE_URL}interior2.jpg`, alt: 'Kinroll Branch Interior 2' },
+  { src: `${import.meta.env.BASE_URL}interior3.jpg`, alt: 'Kinroll Branch Interior 3' }
 ];
 
 const Concept = () => {

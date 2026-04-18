@@ -1,13 +1,13 @@
 import './MenuPreview.css';
 
 const menuImages = [
-  'menu online-02.jpg',
-  'menu online-03.jpg',
-  'menu online-04.jpg',
-  'menu online-05.jpg',
-  'menu online-06.jpg',
-  'menu online-07.jpg',
-  'menu online-08.jpg'
+  'menu_online_02.jpg',
+  'menu_online_03.jpg',
+  'menu_online_04.jpg',
+  'menu_online_05.jpg',
+  'menu_online_06.jpg',
+  'menu_online_07.jpg',
+  'menu_online_08.jpg'
 ];
 
 const MenuPreview = () => {
