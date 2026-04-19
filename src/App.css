@@ -120,6 +120,10 @@
   text-transform: uppercase;
   letter-spacing: 0.3em;
   font-weight: 300;
+  color: var(--text); /* Explicitly set to black to fix blue mobile bug */
+  background: none;
+  border: none;
+  font-family: var(--font-sans);
 }
 
 .footer {
