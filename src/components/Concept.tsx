@@ -1,11 +1,5 @@
 import './Concept.css';
 
-const interiorImages = [
-  { src: `${import.meta.env.BASE_URL}interior1.jpg`, alt: 'Kinroll Branch Interior 1' },
-  { src: `${import.meta.env.BASE_URL}interior2.jpg`, alt: 'Kinroll Branch Interior 2' },
-  { src: `${import.meta.env.BASE_URL}interior3.jpg`, alt: 'Kinroll Branch Interior 3' }
-];
-
 const Concept = () => {
   return (
     <section id="concept" className="concept section-padding">
@@ -21,18 +15,7 @@ const Concept = () => {
           </div>
         </div>
       </div>
-      
-      <div className="interior-gallery">
-         {interiorImages.map((img, index) => (
-           <div key={index} className="interior-image-wrapper">
-              <img 
-                src={img.src} 
-                alt={img.alt} 
-                className="interior-img"
-              />
-           </div>
-         ))}
-      </div>
+      {/* All branch and brand images removed from this section */}
     </section>
   );
 };

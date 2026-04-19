@@ -14,7 +14,7 @@ const MenuPreview = () => {
   return (
     <section id="menu" className="menu-preview section-padding">
       <div className="container">
-        <h2 className="section-title text-center">Our Menu</h2>
+        <h2 className="section-title text-center">MENU</h2>
         <div className="menu-gallery">
           {menuImages.map((src, index) => (
             <div key={index} className="menu-page">

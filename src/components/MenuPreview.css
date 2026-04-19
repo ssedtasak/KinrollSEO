@@ -1,5 +1,6 @@
 .menu-preview {
-  padding: var(--spacing-xl) 0;
+  padding-top: var(--spacing-sm);
+  padding-bottom: var(--spacing-xl);
   background-color: var(--bg);
 }
 
@@ -9,11 +10,17 @@
   letter-spacing: 0.3em;
 }
 
+.menu-list-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Restrict gallery width for cleaner web view */
 .menu-gallery {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  max-width: 1000px;
+  max-width: 800px; /* Shrunk from full width for better desktop look */
   margin: 0 auto;
 }
 
@@ -28,16 +35,89 @@
   display: block;
 }
 
+.menu-category {
+  margin-bottom: var(--spacing-lg);
+}
+
+.category-title {
+  font-size: 1rem;
+  letter-spacing: 0.4em;
+  color: var(--text-muted);
+  margin-bottom: var(--spacing-md);
+  text-transform: uppercase;
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.menu-list-item {
+  border-bottom: 1px solid rgba(0,0,0,0.03);
+  padding-bottom: 4rem;
+}
+
+.item-name {
+  font-size: 2.2rem;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0;
+}
+
+.item-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item-price {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 500;
+  color: var(--text);
+  display: block;
+  margin-bottom: 2rem;
+}
+
 .menu-footer {
   margin-top: var(--spacing-xl);
   text-align: center;
+  padding: 0 var(--spacing-md); /* Prevent edge touching on mobile */
+}
+
+/* Fixed: Minimalist link to avoid overlap */
+.menu-footer .btn-outline {
+  display: inline-block;
+  border: none;
+  padding: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--text);
+  background: none;
+  font-size: 0.8rem;
+  width: auto;
+}
+
+@media (max-width: 1024px) {
+  .item-name {
+    font-size: 1.8rem;
+  }
 }
 
 @media (max-width: 768px) {
-  .section-title {
-    font-size: 1.8rem;
+  .section-padding {
+    padding: 6rem 0; /* More compact on mobile */
   }
-  .menu-gallery {
-    gap: 1rem;
+  .item-name {
+    font-size: 1.4rem;
+  }
+  .menu-footer {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
   }
 }
